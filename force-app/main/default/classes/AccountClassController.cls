@@ -13,4 +13,15 @@ public class AccountClassController {
         system.debug(returnLst);
         return returnlst;
     }
+    @AuraEnabled
+    public static void createdName(String accountNameFromText){
+        try {
+            Account acc = new Account();
+            acc.Name = accountNameFromText;
+            insert acc;
+            
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
 }
