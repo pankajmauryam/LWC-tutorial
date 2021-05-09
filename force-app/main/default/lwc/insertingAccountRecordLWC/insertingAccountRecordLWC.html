@@ -1,13 +1,18 @@
 <template>
-    <lightning-layout class="slds-p-around_medium">
+    
+        <div  class="slds-p-around_medium">
         <lightning-layout-item>
             <lightning-input type="text" placeholder='Enter First Name' label="Enter First Name" value={accountName} onchange={handleChangeAccountName}></lightning-input>
         </lightning-layout-item>
+        </div>
+        <div  class="slds-p-around_medium">
         <lightning-layout-item>
             <lightning-input type="text" placeholder='Enter Last Name' label="Enter Last Name"></lightning-input>
         </lightning-layout-item>
-        <lightning-button label="Create Account" onclick={createAccount}></lightning-button>
-    </lightning-layout>
+        </div>
+        <div  class="slds-p-around_medium">
+        <lightning-button label="Create Account" onclick={createAccount} variant="brand"></lightning-button>
+        </div>
    
     
 </template>

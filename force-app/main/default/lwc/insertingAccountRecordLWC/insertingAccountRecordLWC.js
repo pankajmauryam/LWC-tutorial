@@ -11,18 +11,18 @@ export default class InsertingAccountRecordLWC extends LightningElement {
         createAccountRecord({
             accountNameFromText : this.accountName
         }).then(result => {
-            const event = ShowToastEvent({
+            const event = new ShowToastEvent({
                 title : 'Account Created',
                 message : 'Account created successfully'+ this.accountName,
-                variant : success
-            })
+                variant : 'success'
+            });
             this.dispatchEvent(event);
         }).catch(error => {
-            const event= ShowToastEvent({
+            const event= new ShowToastEvent({
                 title: 'Error',
                 message : 'Please contact to admin',
-                variant : error
-            })
+                variant : 'error'
+            });
             this.dispatchEvent(event);
         })
 
