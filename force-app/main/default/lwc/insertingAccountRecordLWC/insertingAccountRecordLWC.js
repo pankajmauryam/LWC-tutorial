@@ -18,7 +18,7 @@ export default class InsertingAccountRecordLWC extends LightningElement {
         }).then(result => {
             const event = new ShowToastEvent({
                 title : 'Account Created',
-                message : 'Account created successfully'+ "Account Name"+this.accountName+"Account Mobile="+ this.mobileNumber,
+                message : 'Account created successfully'+""+ "Account Name="+this.accountName+" "+"Account Mobile="+ this.mobileNumber,
                 variant : 'success'
             });
             this.dispatchEvent(event);
