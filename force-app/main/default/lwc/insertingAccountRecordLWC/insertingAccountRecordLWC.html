@@ -1,5 +1,6 @@
 <template>
-    
+    <div class="slds-card">
+        <span style="font-size: 30px;font-weight:400"> Account Creation From LWC</span>
         <div  class="slds-p-around_medium">
         <lightning-layout-item>
             <lightning-input type="text" placeholder='Enter First Name' label="Enter First Name" value={accountName} onchange={handleChangeAccountName}></lightning-input>
@@ -7,12 +8,12 @@
         </div>
         <div  class="slds-p-around_medium">
         <lightning-layout-item>
-            <lightning-input type="text" placeholder='Enter Last Name' label="Enter Last Name"></lightning-input>
+            <lightning-input type="text" placeholder='Enter Mobile Number' label="Enter Mobile Number" value={mobileNumber} onchange={handleChangeMobileNumber}></lightning-input>
         </lightning-layout-item>
         </div>
         <div  class="slds-p-around_medium">
         <lightning-button label="Create Account" onclick={createAccount} variant="brand"></lightning-button>
         </div>
-   
+   </div>
     
 </template>

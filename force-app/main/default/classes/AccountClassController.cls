@@ -14,10 +14,11 @@ public class AccountClassController {
         return returnlst;
     }
     @AuraEnabled
-    public static void createdName(String accountNameFromText){
+    public static void createdName(String accountNameFromText,String accountMobileNumberFromInput){
         try {
             Account acc = new Account();
             acc.Name = accountNameFromText;
+            acc.Phone = accountMobileNumberFromInput;
             insert acc;
             
         } catch (Exception e) {
